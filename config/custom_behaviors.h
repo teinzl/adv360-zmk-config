@@ -69,8 +69,8 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 #define SPC_MVL   &kp LC(LA(LG(LEFT)))
 
 // NUM Layer Home row mods
-#define NUM_MULTI  &kp MULTIPLY
-#define NUM_DIVIDE &hml LCTRL DIVIDE
+#define NUM_MULTI  &kp KP_MULTIPLY
+#define NUM_DIVIDE &hml LCTRL KP_DIVIDE
 #define NUM_N4     &hml LALT N4
 #define NUM_N5     &hml LGUI N5
 #define NUM_N6     &hml LSHFT N6
@@ -185,6 +185,7 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 };
 
 
+// tap: caps word | double-tap: caps lock
 ZMK_BEHAVIOR(caps_dance, tap_dance,
     tapping-term-ms = <200>;
     bindings = <&caps_word>, <&kp CAPS>;
