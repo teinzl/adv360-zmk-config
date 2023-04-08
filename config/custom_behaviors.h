@@ -187,6 +187,6 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 
 ZMK_BEHAVIOR(caps_dance, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&caps_word>, <&kp CAPS>
+    bindings = <&caps_word>, <&kp CAPS>;
 )
 
