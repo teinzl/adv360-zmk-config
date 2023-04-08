@@ -1,13 +1,236 @@
 layout: {qmk_keyboard: ergodox_ez/base, qmk_layout: LAYOUT_ergodox_pretty}
 layers:
-  base_layer: ['=', '1', '2', '3', '4', '5', keypad, mod, '6', '7', '8', '9', '0', '-', TAB, Q, W, E, R, T, base_layer, mouse, Y, U, I, O, P, \, ESC, A, S, D, F,
-    G, colemak_layer, '', H, J, K, L, ;, '''', LSHFT, Z, X, C, V, B, N, M, ',', ., /, RSHFT, fn, '`', CAPS, LEFT, RIGHT, UP, DOWN, '[', ']', fn, LCTRL, LALT, LGUI,
-    RCTRL, BSPC, DEL, HOME, PG UP, ENTER, SPACE, END, PG DN]
-  colemak_layer: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', Q, W, F, P, B, '', '', J, L, U, Y, '''', \, '', A, R, S, T, G, '', '', M, N, E, I, O,
-    /, '', Z, X, C, D, V, K, H, ',', ., ;, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
-  keypad: ['', '', '', '', '', '', '', '', '', KP NUM, KP EQUAL, KP DIVIDE, KP MULTIPLY, '', '', '', '', '', '', '', '', '', '', KP 7, KP 8, KP 9, KP MINUS, '', '',
-    '', '', '', '', '', '', '', '', KP 4, KP 5, KP 6, KP PLUS, '', '', '', '', '', '', '', '', KP 1, KP 2, KP 3, KP ENTER, '', '', '', '', '', '', KP 0, '', KP DOT,
-    '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+  base_layer:
+  - LA(LG(F))
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - num_sym
+  - mod
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - LC(LA(LG(RIGHT)))
+  - '&gresc'
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - base_layer
+  - mouse
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - \
+  - TAB
+  - {t: A, h: LCTRL}
+  - {t: S, h: LALT}
+  - {t: D, h: LGUI}
+  - {t: F, h: LSHFT}
+  - G
+  - colemak_layer
+  - nav
+  - H
+  - {t: J, h: RSHFT}
+  - {t: K, h: RGUI}
+  - {t: L, h: RALT}
+  - {t: ;, h: LCTRL}
+  - ''''
+  - LSHFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - RSHFT
+  - fn
+  - '-'
+  - '='
+  - LEFT
+  - RIGHT
+  - UP
+  - DOWN
+  - '['
+  - ']'
+  - fn
+  - LCTRL
+  - '&caps_dance'
+  - RGUI
+  - RCTRL
+  - '&bs_del'
+  - {t: '0', h: num_sym}
+  - HOME
+  - PG UP
+  - {t: ENTER, h: fn}
+  - {t: '0', h: nav}
+  - END
+  - PG DN
+  colemak_layer:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - ''
+  - ''
+  - J
+  - L
+  - U
+  - Y
+  - ''''
+  - \
+  - ''
+  - {t: A, h: LCTRL}
+  - {t: R, h: LALT}
+  - {t: S, h: LGUI}
+  - {t: T, h: LSHFT}
+  - G
+  - ''
+  - ''
+  - M
+  - {t: N, h: RSHFT}
+  - {t: E, h: RGUI}
+  - {t: I, h: RALT}
+  - {t: O, h: LCTRL}
+  - /
+  - ''
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - '&comma_morph'
+  - '&dot_morph'
+  - '&qexcl'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  num_sym:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - $
+  - '*'
+  - ''
+  - ''
+  - ''
+  - ''
+  - MULTIPLY
+  - '7'
+  - '8'
+  - '9'
+  - +
+  - ''
+  - ''
+  - '&'
+  - (
+  - +
+  - )
+  - '%'
+  - \
+  - ''
+  - {t: DIVIDE, h: LCTRL}
+  - {t: '4', h: LALT}
+  - {t: '5', h: LGUI}
+  - {t: '6', h: LSHFT}
+  - '-'
+  - ''
+  - ''
+  - '|'
+  - {t: '{', h: RSHFT}
+  - {t: '=', h: RGUI}
+  - {t: '}', h: RALT}
+  - {t: '@', h: LCTRL}
+  - /
+  - ''
+  - '='
+  - '1'
+  - '2'
+  - '3'
+  - ENTER
+  - '!'
+  - '['
+  - '-'
+  - ']'
+  - '#'
+  - ''
+  - ''
+  - ''
+  - '0'
+  - ','
+  - .
+  - <
+  - ^
+  - '>'
+  - '~'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   fn:
   - F1
   - F2
@@ -24,38 +247,38 @@ layers:
   - F11
   - F12
   - ''
+  - F12
+  - F7
+  - F8
+  - F9
   - ''
   - ''
   - ''
   - ''
+  - PREV
+  - VOL UP
+  - NEXT
+  - SLEEP
+  - ''
+  - ''
+  - F11
+  - F4
+  - F5
+  - F6
   - ''
   - ''
   - ''
   - ''
+  - {t: LC(LEFT), h: RSHFT}
+  - {t: VOL DN, h: LGUI}
+  - {t: LC(RIGHT), h: RALT}
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - F10
+  - F1
+  - F2
+  - F3
   - ''
   - ''
   - ''
@@ -66,6 +289,10 @@ layers:
   - {type: held}
   - ''
   - ''
+  - LA(LG(LEFT))
+  - LA(LG(RIGHT))
+  - LC(LG(UP))
+  - LC(LG(DOWN))
   - ''
   - ''
   - ''
@@ -74,17 +301,13 @@ layers:
   - ''
   - ''
   - ''
+  - LA(LG(F))
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - MUTE
+  - PP
+  - LC(LA(LG(LEFT)))
+  - LC(LA(LG(RIGHT)))
   mod:
   - ''
   - BT 0
@@ -162,7 +385,84 @@ layers:
   - ''
   - ''
   - ''
-  mouse: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-    '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '&mmv MOVE_HOR(-600)', '&mmv MOVE_HOR(600)', '&mmv MOVE_VERT(-600)', '&mmv MOVE_VERT(600)',
-    '', '', '', '&mkp MB3', '', '', '&mkp MB3', '&mkp MB1', '&mkp MB2', '&mwh SCROLL_HOR(-10)', '&mwh SCROLL_VERT(10)', '&mkp MB2', '&mkp MB1', '&mwh SCROLL_HOR(10)',
-    '&mwh SCROLL_VERT(-10)']
+  mouse: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '&mwh SCROLL_VERT(-10)', '&mmv MOVE_VERT(-600)', '&mwh SCROLL_VERT(10)',
+    '', '', '', '', '', '', '', '', '', '', '&mwh SCROLL_HOR(-10)', '&mmv MOVE_HOR(-600)', '&mmv MOVE_VERT(600)', '&mmv MOVE_HOR(600)', '&mwh SCROLL_HOR(10)', '',
+    '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '&mkp MB3', '', '', '&mkp MB3', '&mkp MB1', '&mkp MB2', '', '&mwh SCROLL_VERT(10)',
+    '&mkp MB2', '&mkp MB1', '', '&mwh SCROLL_VERT(-10)']
+  nav:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - LS(TAB)
+  - '&swapper'
+  - ''
+  - ''
+  - ''
+  - PG UP
+  - {t: BSPC, h: LC(BSPC)}
+  - {t: UP, h: LC(HOME)}
+  - {t: DEL, h: LC(DEL)}
+  - ''
+  - ''
+  - ''
+  - {t: LCTRL, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: LGUI, h: sticky}
+  - {t: LSHFT, h: sticky}
+  - ''
+  - ''
+  - ''
+  - PG DN
+  - {t: LEFT, h: base_layer}
+  - {t: DOWN, h: LC(END)}
+  - {t: RIGHT, h: base_layer}
+  - RET
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - TAB
+  - <
+  - '>'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - CANCEL
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
