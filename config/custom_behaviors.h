@@ -151,24 +151,6 @@ ZMK_BEHAVIOR(spund, mod_morph,
   mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-// tap: end | hold: command
-ZMK_BEHAVIOR(end_cmd, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <200>;
-    bindings = <&kp LGUI>, <&kp END>;
-)
-
-// tap: page down | hold: command
-ZMK_BEHAVIOR(pgdn_cmd, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <200>;
-    bindings = <&kp LGUI>, <&kp PG_DN>;
-)
-
-
-
 // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
 ZMK_BEHAVIOR(bs_del, mod_morph,
     bindings = <&kp BSPC>, <&kp DEL>;
