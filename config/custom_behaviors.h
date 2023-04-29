@@ -86,6 +86,9 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 #define DSK_NEXT    &hmr RALT LC(RIGHT)      // next     desktop
 #define VOL_DOWN    &hmr LGUI C_VOL_DN
 
+#define NEXT_WINDOW &kp LG(GRAVE)
+#define PREV_WINDOW &kp LS(LG(GRAVE))
+
 // mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
 #define MASK_MODS(NAME, MODS, BINDING) \
     ZMK_BEHAVIOR(NAME, mod_morph, \
@@ -136,7 +139,7 @@ ZMK_BEHAVIOR(qexcl, mod_morph,
 )
 
 
-// // tap: space | shift + tap: underscore | hold: activate layer
+// tap: space | shift + tap: underscore | hold: activate layer
 ZMK_BEHAVIOR(lt_spc, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -146,6 +149,22 @@ ZMK_BEHAVIOR(lt_spc, hold_tap,
 ZMK_BEHAVIOR(spund, mod_morph,
   bindings = <&kp SPACE>, <&kp UNDERSCORE>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+// tap: end | hold: command
+ZMK_BEHAVIOR(end_cmd, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    bindings = <&kp LGUI>, <&kp END>;
+)
+
+// tap: page down | hold: command
+ZMK_BEHAVIOR(pgdn_cmd, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    bindings = <&kp LGUI>, <&kp PG_DN>;
 )
 
 
