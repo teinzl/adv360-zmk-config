@@ -68,11 +68,6 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 #define SPC_MVL   &kp LC(LA(LG(LEFT)))
 #define SPC_UNDO  &kp LC(LA(LG(Z)))
 
-#define LOCK_SCRN  &kp LC(LG(Q))
-
-#define LHYP      LS(LC(LA(LGUI)))
-#define RHYP      RS(RC(RA(RGUI)))
-
 
 // NUM Layer Home row mods
 #define NUM_N0     &hml LCTRL N0
@@ -86,17 +81,21 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 #define NUM_PRCNT  &hmr LCTRL PRCNT
 
 // NAV Layer Home row mods
-#define PREV_WINDOW &hml LCTRL LS(LG(GRAVE))
-#define NEXT_WINDOW &hml LALT LG(GRAVE)
-#define SWAP_PREV   &hml LGUI LS(TAB)
+#define DSK_PREV    &hml LCTRL LC(LEFT)      // previous desktop
+#define DSK_NEXT    &hml LALT LC(RIGHT)      // next     desktop
+#define PREV_WINDOW &hml LGUI LS(LG(GRAVE))
+#define NEXT_WINDOW &hml LSHFT LG(GRAVE)
+
+// TODO - figure out way to get swapper on index + middle finger with home row mods
+#define SWAP_PREV   &kp LS(TAB) // I'd like this to still work as a home row mod, but doesn't work with tri-state swapper
 // #define SWAPPER     &hml LSHFT &swapper // This doesn't work TODO - figure out how to bind swapper into a hold-tap
 
 // misc aliases
+#define LOCK_SCRN   &kp LC(LG(Q))
 #define NUM_MULTI   &kp KP_MULTIPLY
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
-#define DSK_PREV    &kp LC(LEFT)      // previous desktop
-#define DSK_NEXT    &kp LC(RIGHT)      // next     desktop
-
+#define LHYP      LS(LC(LA(LGUI)))
+#define RHYP      RS(RC(RA(RGUI)))
 
 
 // mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
