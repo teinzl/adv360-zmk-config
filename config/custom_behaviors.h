@@ -38,7 +38,6 @@
     )
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
-MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // left-hand HRM for repeat combo
 
 /* Nav cluster */
 
@@ -67,27 +66,38 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 #define SPC_FULL  &kp LA(LG(F))
 #define SPC_MVR   &kp LC(LA(LG(RIGHT)))
 #define SPC_MVL   &kp LC(LA(LG(LEFT)))
+#define SPC_UNDO  &kp LC(LA(LG(Z)))
+
+#define LOCK_SCRN  &kp LC(LG(Q))
+
+#define LHYP      LS(LC(LA(LGUI)))
+#define RHYP      RS(RC(RA(RGUI)))
+
 
 // NUM Layer Home row mods
-#define NUM_MULTI  &kp KP_MULTIPLY
-#define NUM_DIVIDE &hml LCTRL KP_DIVIDE
+#define NUM_N0     &hml LCTRL N0
 #define NUM_N4     &hml LALT N4
 #define NUM_N5     &hml LGUI N5
 #define NUM_N6     &hml LSHFT N6
 
-#define NUM_LBRC   &hmr RSHFT LBRC
-#define NUM_EQUAL  &hmr RGUI EQUAL
-#define NUM_RBRC   &hmr RALT RBRC
-#define NUM_AT     &hmr LCTRL AT
+#define NUM_LBKT   &hmr RSHFT LBKT
+#define NUM_RBKT   &hmr RGUI RBKT
+#define NUM_EQUAL  &hmr RALT EQUAL
+#define NUM_PRCNT  &hmr LCTRL PRCNT
+
+// NAV Layer Home row mods
+#define PREV_WINDOW &hml LCTRL LS(LG(GRAVE))
+#define NEXT_WINDOW &hml LALT LG(GRAVE)
+#define SWAP_PREV   &hml LGUI LS(TAB)
+#define SWAPPER     &hml LSHFT &swapper
 
 // misc aliases
+#define NUM_MULTI   &kp KP_MULTIPLY
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
-#define DSK_PREV    &hmr RSHFT LC(LEFT)      // previous desktop
-#define DSK_NEXT    &hmr RALT LC(RIGHT)      // next     desktop
-#define VOL_DOWN    &hmr LGUI C_VOL_DN
+#define DSK_PREV    &kp LC(LEFT)      // previous desktop
+#define DSK_NEXT    &kp LC(RIGHT)      // next     desktop
 
-#define NEXT_WINDOW &kp LG(GRAVE)
-#define PREV_WINDOW &kp LS(LG(GRAVE))
+
 
 // mask CTRL when holding left/right to avoid accidental jumps to beginning/end of document
 #define MASK_MODS(NAME, MODS, BINDING) \
@@ -151,7 +161,14 @@ ZMK_BEHAVIOR(spund, mod_morph,
   mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-// tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
+// tap: backspace | lshft + tap: delete | rshft + tap: shift-delete | hold: activate layer
+ZMK_BEHAVIOR(lt_del, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&bs_del>;
+
+)
 ZMK_BEHAVIOR(bs_del, mod_morph,
     bindings = <&kp BSPC>, <&kp DEL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
