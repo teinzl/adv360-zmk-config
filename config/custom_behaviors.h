@@ -89,7 +89,7 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 #define PREV_WINDOW &hml LCTRL LS(LG(GRAVE))
 #define NEXT_WINDOW &hml LALT LG(GRAVE)
 #define SWAP_PREV   &hml LGUI LS(TAB)
-#define SWAPPER     &hml LSHFT &swapper
+// #define SWAPPER     &hml LSHFT &swapper // This doesn't work TODO - figure out how to bind swapper into a hold-tap
 
 // misc aliases
 #define NUM_MULTI   &kp KP_MULTIPLY
