@@ -29,14 +29,6 @@
         zmk,matrix_transform = &urobs_transform;
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <6 8>;
-            then-layer = <9>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -267,6 +259,14 @@
         };
 
 
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <6 8>;
+            then-layer = <9>;
+        };
     };
 
 };
