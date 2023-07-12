@@ -90,6 +90,64 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 #define SWAP_PREV   &kp LS(TAB) // I'd like this to still work as a home row mod, but doesn't work with tri-state swapper
 // #define SWAPPER     &hml LSHFT &swapper // This doesn't work TODO - figure out how to bind swapper into a hold-tap
 
+// Left Hand Hyper Layer
+// Might be a little excessive to do this just to get the fancy copy/paste thumb keys
+#define HYP_N1 &kp LS(LG(LA(LC(N1))))
+#define HYP_N2 &kp LS(LG(LA(LC(N2))))
+#define HYP_N3 &kp LS(LG(LA(LC(N3))))
+#define HYP_N4 &kp LS(LG(LA(LC(N4))))
+#define HYP_N5 &kp LS(LG(LA(LC(N5))))
+#define HYP_Q &kp LS(LG(LA(LC(Q))))
+#define HYP_W &kp LS(LG(LA(LC(W))))
+#define HYP_F &kp LS(LG(LA(LC(F))))
+#define HYP_P &kp LS(LG(LA(LC(P))))
+#define HYP_B &kp LS(LG(LA(LC(B))))
+#define HYP_A &kp LS(LG(LA(LC(A))))
+#define HYP_R &kp LS(LG(LA(LC(R))))
+#define HYP_S &kp LS(LG(LA(LC(S))))
+#define HYP_T &kp LS(LG(LA(LC(T))))
+#define HYP_G &kp LS(LG(LA(LC(G))))
+// Only Z doesn't have a hyper shortcut, instead it has a shortcut to command+z for undo
+#define HYP_X &kp LS(LG(LA(LC(X))))
+#define HYP_C &kp LS(LG(LA(LC(C))))
+#define HYP_D &kp LS(LG(LA(LC(D))))
+#define HYP_V &kp LS(LG(LA(LC(V))))
+#define HYP_MINUS &kp LS(LG(LA(LC(MINUS))))
+#define HYP_EQUAL &kp LS(LG(LA(LC(EQUAL))))
+#define HYP_LEFT &kp LS(LG(LA(LC(LEFT))))
+#define HYP_RIGHT &kp LS(LG(LA(LC(RIGHT))))
+
+// Right hand hyper keys
+// need this to be able to preserve plain hyper modifier behavior on right hand while using left hyper key
+#define HYP_N6 &kp LS(LG(LA(LC(N6))))
+#define HYP_N7 &kp LS(LG(LA(LC(N7))))
+#define HYP_N8 &kp LS(LG(LA(LC(N8))))
+#define HYP_N9 &kp LS(LG(LA(LC(N9))))
+#define HYP_N0 &kp LS(LG(LA(LC(N0))))
+#define HYP_J &kp LS(LG(LA(LC(J))))
+#define HYP_L &kp LS(LG(LA(LC(L))))
+#define HYP_U &kp LS(LG(LA(LC(U))))
+#define HYP_Y &kp LS(LG(LA(LC(Y))))
+#define HYP_SQT &kp LS(LG(LA(LC(SQT))))
+#define HYP_M &kp LS(LG(LA(LC(M))))
+#define HYP_N &kp LS(LG(LA(LC(N))))
+#define HYP_E &kp LS(LG(LA(LC(E))))
+#define HYP_I &kp LS(LG(LA(LC(I))))
+#define HYP_O &kp LS(LG(LA(LC(O))))
+#define HYP_K &kp LS(LG(LA(LC(K))))
+#define HYP_H &kp LS(LG(LA(LC(H))))
+#define HYP_COMMA &kp LS(LG(LA(LC(COMMA))))
+#define HYP_DOT &kp LS(LG(LA(LC(DOT))))
+#define HYP_QMARK &kp LS(LG(LA(LC(QMARK))))
+#define HYP_UP &kp LS(LG(LA(LC(UP))))
+#define HYP_DOWN &kp LS(LG(LA(LC(DOWN))))
+#define HYP_LBKT &kp LS(LG(LA(LC(LBKT))))
+#define HYP_RBKT &kp LS(LG(LA(LC(RBKT))))
+// hyper + nav specific
+#define HYP_RET &kp LS(LG(LA(LC(RET))))
+#define HYP_TAB &kp LS(LG(LA(LC(TAB))))
+#define HYP_ESC &kp LS(LG(LA(LC(ESC))))
+
 // misc aliases
 #define LOCK_SCRN   &kp LC(LG(Q))
 #define NUM_MULTI   &kp KP_MULTIPLY
@@ -177,7 +235,6 @@ ZMK_BEHAVIOR(bs_del, mod_morph,
 
 
 
-// TODO - I want to put this on a layer so I can hold a thumb key, then either single or double tap c
 // tap: copy | double-tap: cut
 ZMK_BEHAVIOR(copy_cut, tap_dance,
     tapping-term-ms = <200>;
