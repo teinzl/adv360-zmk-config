@@ -152,7 +152,7 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 #define LOCK_SCRN   &kp LC(LG(Q))
 #define NUM_MULTI   &kp KP_MULTIPLY
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
-#define LHYP      LS(LC(LA(LGUI)))
+// #define LHYP      LS(LC(LA(LGUI)))
 #define RHYP      RS(RC(RA(RGUI)))
 
 
