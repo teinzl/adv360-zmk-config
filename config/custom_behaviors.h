@@ -176,7 +176,7 @@ ZMK_BEHAVIOR(smart_shft, mod_morph,
 // Command+Tab swapper, requires PR #1366
 ZMK_BEHAVIOR(swapper, tri_state,
     bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-    ignored-key-positions = <LT2>;
+    ignored-key-positions = <LB2>; // ignored key should be position of SWAP_PREV
 )
 
 // tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
