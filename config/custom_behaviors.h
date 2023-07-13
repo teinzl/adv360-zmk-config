@@ -56,8 +56,8 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 #define NAV_RIGHT &mt_end 0    RIGHT   // tap: right | long-tap: end       of line
 #define NAV_UP    &mt LC(HOME) UP      // tap: up    | long-tap: beginning of document
 #define NAV_DOWN  &mt LC(END)  DOWN    // tap: down  | long-tap: end       of document
-#define NAV_BSPC  &mt LC(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
-#define NAV_DEL   &mt LC(DEL)  DEL     // tap: del   | long-tap: delete word forward
+#define NAV_BSPC  &mt LA(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
+#define NAV_DEL   &mt LA(DEL)  DEL     // tap: del   | long-tap: delete word forward
 
 #define SPC_UP    &kp LC(LG(UP))
 #define SPC_DOWN  &kp LC(LG(DOWN))
@@ -90,69 +90,47 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 #define SWAP_PREV   &kp LS(TAB) // I'd like this to still work as a home row mod, but doesn't work with tri-state swapper
 // #define SWAPPER     &hml LSHFT &swapper // This doesn't work TODO - figure out how to bind swapper into a hold-tap
 
-// Left Hand Hyper Layer
-// Might be a little excessive to do this just to get the fancy copy/paste thumb keys
-#define HYP_N1 &kp LS(LG(LA(LC(N1))))
-#define HYP_N2 &kp LS(LG(LA(LC(N2))))
-#define HYP_N3 &kp LS(LG(LA(LC(N3))))
-#define HYP_N4 &kp LS(LG(LA(LC(N4))))
-#define HYP_N5 &kp LS(LG(LA(LC(N5))))
-#define HYP_Q &kp LS(LG(LA(LC(Q))))
-#define HYP_W &kp LS(LG(LA(LC(W))))
-#define HYP_F &kp LS(LG(LA(LC(F))))
-#define HYP_P &kp LS(LG(LA(LC(P))))
-#define HYP_B &kp LS(LG(LA(LC(B))))
-#define HYP_A &kp LS(LG(LA(LC(A))))
-#define HYP_R &kp LS(LG(LA(LC(R))))
-#define HYP_S &kp LS(LG(LA(LC(S))))
-#define HYP_T &kp LS(LG(LA(LC(T))))
-#define HYP_G &kp LS(LG(LA(LC(G))))
-// Only Z doesn't have a hyper shortcut, instead it has a shortcut to command+z for undo
-#define HYP_X &kp LS(LG(LA(LC(X))))
-#define HYP_C &kp LS(LG(LA(LC(C))))
-#define HYP_D &kp LS(LG(LA(LC(D))))
-#define HYP_V &kp LS(LG(LA(LC(V))))
-#define HYP_MINUS &kp LS(LG(LA(LC(MINUS))))
-#define HYP_EQUAL &kp LS(LG(LA(LC(EQUAL))))
-#define HYP_LEFT &kp LS(LG(LA(LC(LEFT))))
-#define HYP_RIGHT &kp LS(LG(LA(LC(RIGHT))))
+// Quick Layer shortcuts
+// All keys become tap: command + (key) and long tap: shift + command + (key)
+#define Q_Q &mt LS(LG(Q)) LG(Q)
+#define Q_W &mt LS(LG(W)) LG(W)
+#define Q_F &mt LS(LG(F)) LG(F)
+#define Q_P &mt LS(LG(P)) LG(P)
+#define Q_B &mt LS(LG(B)) LG(B)
+#define Q_A &mt LS(LG(A)) LG(A)
+#define Q_R &mt LS(LG(R)) LG(R)
+#define Q_S &mt LS(LG(S)) LG(S)
+#define Q_T &mt LS(LG(T)) LG(T)
+#define Q_G &mt LS(LG(G)) LG(G)
+#define Q_Z &mt LS(LG(Z)) LG(Z)
+#define Q_X &mt LS(LG(X)) LG(X)
+#define Q_C &mt LS(LG(C)) LG(C)
+#define Q_D &mt LS(LG(D)) LG(D)
+#define Q_V &mt LS(LG(V)) LG(V)
 
 // Right hand hyper keys
 // need this to be able to preserve plain hyper modifier behavior on right hand while using left hyper key
-#define HYP_N6 &kp LS(LG(LA(LC(N6))))
-#define HYP_N7 &kp LS(LG(LA(LC(N7))))
-#define HYP_N8 &kp LS(LG(LA(LC(N8))))
-#define HYP_N9 &kp LS(LG(LA(LC(N9))))
-#define HYP_N0 &kp LS(LG(LA(LC(N0))))
-#define HYP_J &kp LS(LG(LA(LC(J))))
-#define HYP_L &kp LS(LG(LA(LC(L))))
-#define HYP_U &kp LS(LG(LA(LC(U))))
-#define HYP_Y &kp LS(LG(LA(LC(Y))))
-#define HYP_SQT &kp LS(LG(LA(LC(SQT))))
-#define HYP_M &kp LS(LG(LA(LC(M))))
-#define HYP_N &kp LS(LG(LA(LC(N))))
-#define HYP_E &kp LS(LG(LA(LC(E))))
-#define HYP_I &kp LS(LG(LA(LC(I))))
-#define HYP_O &kp LS(LG(LA(LC(O))))
-#define HYP_K &kp LS(LG(LA(LC(K))))
-#define HYP_H &kp LS(LG(LA(LC(H))))
-#define HYP_COMMA &kp LS(LG(LA(LC(COMMA))))
-#define HYP_DOT &kp LS(LG(LA(LC(DOT))))
-#define HYP_QMARK &kp LS(LG(LA(LC(QMARK))))
-#define HYP_UP &kp LS(LG(LA(LC(UP))))
-#define HYP_DOWN &kp LS(LG(LA(LC(DOWN))))
-#define HYP_LBKT &kp LS(LG(LA(LC(LBKT))))
-#define HYP_RBKT &kp LS(LG(LA(LC(RBKT))))
-// hyper + nav specific
-#define HYP_RET &kp LS(LG(LA(LC(RET))))
-#define HYP_TAB &kp LS(LG(LA(LC(TAB))))
-#define HYP_ESC &kp LS(LG(LA(LC(ESC))))
+#define Q_J &mt LS(LG(J)) LG(J)
+#define Q_L &mt LS(LG(L)) LG(L)
+#define Q_U &mt LS(LG(U)) LG(U)
+#define Q_Y &mt LS(LG(Y)) LG(Y)
+#define Q_SQT &mt LS(LG(SQT)) LG(SQT)
+#define Q_M &mt LS(LG(M)) LG(M)
+#define Q_N &mt LS(LG(N)) LG(N)
+#define Q_E &mt LS(LG(E)) LG(E)
+#define Q_I &mt LS(LG(I)) LG(I)
+#define Q_O &mt LS(LG(O)) LG(O)
+#define Q_K &mt LS(LG(K)) LG(K)
+#define Q_H &mt LS(LG(H)) LG(H)
+#define Q_COMMA &mt LS(LG(COMMA)) LG(COMMA)
+#define Q_DOT &mt LS(LG(DOT)) LG(DOT)
+#define Q_QMARK &mt LS(LG(QMARK)) LG(QMARK)
 
 // misc aliases
 #define LOCK_SCRN   &kp LC(LG(Q))
 #define NUM_MULTI   &kp KP_MULTIPLY
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
-// #define LHYP      LS(LC(LA(LGUI)))
+#define LHYP      LS(LC(LA(LGUI)))
 #define RHYP      RS(RC(RA(RGUI)))
 
 
