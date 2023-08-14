@@ -59,8 +59,8 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 #define NAV_BSPC  &mt LA(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
 #define NAV_DEL   &mt LA(DEL)  DEL     // tap: del   | long-tap: delete word forward
 
-#define SPC_UP    &kp LC(LG(UP))
-#define SPC_DOWN  &kp LC(LG(DOWN))
+#define SPC_UP    &kp LA(LG(UP))
+#define SPC_DOWN  &kp LA(LG(DOWN))
 #define SPC_LEFT  &kp LA(LG(LEFT))
 #define SPC_RIGHT &kp LA(LG(RIGHT))
 #define SPC_FULL  &kp LA(LG(F))
