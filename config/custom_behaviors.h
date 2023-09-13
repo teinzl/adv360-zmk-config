@@ -27,25 +27,25 @@
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumbs
 
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
-    ZMK_BEHAVIOR(NAME, hold_tap, \
-        flavor = "tap-preferred"; \
-        tapping-term-ms = <280>; \
-        quick-tap-ms = <QUICK_TAP_MS>; \
-        global-quick-tap-ms = <150>; \
-        bindings = <HOLD>, <TAP>; \
-        hold-trigger-key-positions = <TRIGGER_POS>; \
-        hold-trigger-on-release; \
-    )
-#define MAKE_HRM_HOLD_PREFERRED(NAME, HOLD, TAP, TREGGER_POS) \
   ZMK_BEHAVIOR(NAME, hold_tap, \
-    flavor = "hold-preferred"; \
-    tapping-term-ms = <280>; \
-    quick-tap-ms = <QUICK_TAP_MS>; \
-    global-quick-tap-ms = <125>; \
-    bindings = <HOLD>, <TAP>; \
-    hold-trigger-key-positions = <TRIGGER_POS>; \
-    hold-trigger-on-release; \
-  )
+      flavor = "tap-preferred"; \
+      tapping-term-ms = <280>; \
+      quick-tap-ms = <QUICK_TAP_MS>; \
+      global-quick-tap-ms = <150>; \
+      bindings = <HOLD>, <TAP>; \
+      hold-trigger-key-positions = <TRIGGER_POS>; \
+      hold-trigger-on-release; \
+      )
+#define MAKE_HRM_HOLD_PREFERRED(NAME, HOLD, TAP, TRIGGER_POS) \
+  ZMK_BEHAVIOR(NAME, hold_tap, \
+      flavor = "hold-preferred"; \
+      tapping-term-ms = <280>; \
+      quick-tap-ms = <QUICK_TAP_MS>; \
+      global-quick-tap-ms = <125>; \
+      bindings = <HOLD>, <TAP>; \
+      hold-trigger-key-positions = <TRIGGER_POS>; \
+      hold-trigger-on-release; \
+      )
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM_HOLD_PREFERRED(hmlh, &kp, &kp, KEYS_R THUMBS) // left-hand homerow mod for shift
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand
