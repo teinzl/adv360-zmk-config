@@ -22,4 +22,4 @@ The keymap contains 6 layers:
   - places arrows and tab controls on the right hand, app and window switchers on the left
 
 
-<img src="https://github.com/cosmicbuffalo/adv360-zmk-config/blob/main/updated%20layout%20(colemak%20layer).jpg?raw=true">
+<img src="https://github.com/cosmicbuffalo/adv360-zmk-config/blob/main/keymap.jpg?raw=true">
