@@ -28,7 +28,7 @@
 
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
   ZMK_BEHAVIOR(NAME, hold_tap, \
-      flavor = "tap-preferred"; \
+      flavor = "balanced"; \
       tapping-term-ms = <280>; \
       quick-tap-ms = <QUICK_TAP_MS>; \
       global-quick-tap-ms = <150>; \
@@ -36,9 +36,9 @@
       hold-trigger-key-positions = <TRIGGER_POS>; \
       hold-trigger-on-release; \
       )
-#define MAKE_HRM_HOLD_PREFERRED(NAME, HOLD, TAP, TRIGGER_POS) \
+#define MAKE_HRM_SHIFT(NAME, HOLD, TAP, TRIGGER_POS) \
   ZMK_BEHAVIOR(NAME, hold_tap, \
-      flavor = "hold-preferred"; \
+      flavor = "balanced"; \
       tapping-term-ms = <280>; \
       quick-tap-ms = <QUICK_TAP_MS>; \
       global-quick-tap-ms = <125>; \
@@ -47,9 +47,9 @@
       hold-trigger-on-release; \
       )
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
-MAKE_HRM_HOLD_PREFERRED(hmlh, &kp, &kp, KEYS_R THUMBS) // left-hand homerow mod for shift
+MAKE_HRM_SHIFT(hmls, &kp, &kp, KEYS_R THUMBS) // left-hand homerow mod for shift
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand
-MAKE_HRM_HOLD_PREFERRED(hmrh, &kp, &kp, KEYS_L THUMBS) // right-hand homerow mod for shift
+MAKE_HRM_SHIFT(hmrs, &kp, &kp, KEYS_L THUMBS) // right-hand homerow mod for shift
 
 /* Nav cluster */
 
