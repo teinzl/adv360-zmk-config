@@ -50,7 +50,6 @@ MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM_HOLD_PREFERRED(hmlh, &kp, &kp, KEYS_R THUMBS) // left-hand homerow mod for shift
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand
 MAKE_HRM_HOLD_PREFERRED(hmrh, &kp, &kp, KEYS_L THUMBS) // right-hand homerow mod for shift
-MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // left-hand HRM for repeat combo
 
 /* Nav cluster */
 
