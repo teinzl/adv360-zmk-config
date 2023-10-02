@@ -66,8 +66,8 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 
 #define NAV_LEFT  &mt_home 0   LEFT    // tap: left  | long-tap: beginning of line
 #define NAV_RIGHT &mt_end 0    RIGHT   // tap: right | long-tap: end       of line
-#define NAV_UP    &mt LC(HOME) UP      // tap: up    | long-tap: beginning of document
-#define NAV_DOWN  &mt LC(END)  DOWN    // tap: down  | long-tap: end       of document
+#define NAV_UP    &kp UP               // tap: up
+#define NAV_DOWN  &kp DOWN             // tap: down
 #define NAV_BSPC  &mt LA(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
 #define NAV_DEL   &mt LA(DEL)  DEL     // tap: del   | long-tap: delete word forward
 
@@ -221,16 +221,6 @@ ZMK_BEHAVIOR(bs_del, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
     keep-mods = <MOD_RSFT>;
 )
-
-
-
-
-// tap: copy | double-tap: cut
-ZMK_BEHAVIOR(copy_cut, tap_dance,
-    tapping-term-ms = <200>;
-    bindings = <&kp LG(C)>, <&kp LG(X)>;
-)
-
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 #define SMART_NUM &smart_num NUM 0
