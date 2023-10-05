@@ -145,7 +145,7 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 #define Q_K &mt LS(LG(K)) LG(K)
 #define Q_H &mt LS(LG(H)) LG(H)
 #define Q_COMMA &mt LS(LG(COMMA)) LG(COMMA)
-#define Q_DOT &mt LS(LG(DOT)) LG(DOT/)
+#define Q_DOT &mt LS(LG(DOT)) LG(DOT)
 #define Q_QMARK &mt LS(LG(QMARK)) LG(QMARK)
 //
 // misc aliases
