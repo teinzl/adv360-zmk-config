@@ -21,6 +21,7 @@
 };
 
 /* Apple Globe key */
+// TODO - this doesn't work
 #define C_KEYBOARD_LAYOUT_SELECT (ZMK_HID_USAGE(HID_USAGE_CONSUMER, 0x029D))
 #define GLOBE C_KEYBOARD_LAYOUT_SELECT
 // As per PR 1938
@@ -176,7 +177,7 @@ ZMK_BEHAVIOR(smart_shft, mod_morph,
 // Command+Tab swapper, requires PR #1366
 ZMK_BEHAVIOR(swapper, tri_state,
     bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-    ignored-key-positions = <LB2>; // ignored key should be position of SWAP_PREV
+    ignored-key-positions = <LB2>, <20>; // ignored key should be position of SWAP_PREV
 )
 
 // tap: comma | shift + tap: semicolon | ctrl + shift + tap: <
