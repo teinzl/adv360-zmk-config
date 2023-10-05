@@ -86,18 +86,18 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 #define SPC_UNDO  &kp LC(LA(LG(Z)))
 
 
-// NUM Layer Home row mods
 
-#define NUM_LBKT   &hmr RSHFT LBKT
-#define NUM_RBKT   &hmr RGUI RBKT
-#define NUM_DOLLAR &hmr RALT DOLLAR
-#define NUM_AT     &hmr LCTRL AT
 
 // SYM Layer home row mods
-#define SYM_FSLH   &hml LCTRL FSLH
+#define SYM_AT     &hmr LCTRL AT
 #define SYM_LT     &hml LALT LT
 #define SYM_MINUS  &hml LGUI MINUS
 #define SYM_EQUAL  &hml LSHFT EQUAL
+
+#define SYM_LBKT   &hmr RSHFT LBKT
+#define SYM_RBKT   &hmr RGUI RBKT
+#define SYM_DOLLAR &hmr RALT DOLLAR
+#define SYM_FSLH   &hml RCTRL FSLH
 
 // NAV Layer Home row mods
 #define PREV_WINDOW &hml LCTRL LS(LG(GRAVE))
