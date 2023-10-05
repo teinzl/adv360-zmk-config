@@ -20,6 +20,11 @@
     quick-tap-ms = <QUICK_TAP_MS>;
 };
 
+/* Apple Globe key */
+#define C_KEYBOARD_LAYOUT_SELECT (ZMK_HID_USAGE(HID_USAGE_CONSUMER, 0x029D))
+#define GLOBE C_KEYBOARD_LAYOUT_SELECT
+// As per PR 1938
+
 /* Homerow mods */
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left hand
@@ -82,21 +87,20 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 
 
 // NUM Layer Home row mods
-#define NUM_N0     &hml LCTRL N0
-#define NUM_N4     &hml LALT N4
-#define NUM_N5     &hml LGUI N5
-#define NUM_N6     &hml LSHFT N6
 
 #define NUM_LBKT   &hmr RSHFT LBKT
 #define NUM_RBKT   &hmr RGUI RBKT
-#define NUM_EQUAL  &hmr RALT EQUAL
-#define NUM_PRCNT  &hmr LCTRL PRCNT
+#define NUM_DOLLAR &hmr RALT DOLLAR
+#define NUM_AT     &hmr LCTRL AT
 
 // NAV Layer Home row mods
-#define DSK_PREV    &hml LCTRL LC(LEFT)      // previous desktop
-#define DSK_NEXT    &hml LALT LC(RIGHT)      // next     desktop
-#define PREV_WINDOW &hml LGUI LS(LG(GRAVE))
-#define NEXT_WINDOW &hml LSHFT LG(GRAVE)
+#define PREV_WINDOW &hml LCTRL LS(LG(GRAVE))
+#define NEXT_WINDOW &hml LALT LG(GRAVE)
+#define NAV_STAB    &hml LGUI LS(TAB)
+#define NAV_TAB     &hmls LSHFT TAB
+
+#define DSK_PREV    &kp LC(LEFT)      // previous desktop
+#define DSK_NEXT    &kp LC(RIGHT)      // next     desktop
 
 // TODO - figure out way to get swapper on index + middle finger with home row mods
 #define SWAP_PREV   &kp LS(TAB) // I'd like this to still work as a home row mod, but doesn't work with tri-state swapper
@@ -135,9 +139,9 @@ ZMK_BEHAVIOR(mt_end,  hold_tap,  bindings = <&masked_end>, <&kp>; MT_CORE)
 #define Q_K &mt LS(LG(K)) LG(K)
 #define Q_H &mt LS(LG(H)) LG(H)
 #define Q_COMMA &mt LS(LG(COMMA)) LG(COMMA)
-#define Q_DOT &mt LS(LG(DOT)) LG(DOT)
+#define Q_DOT &mt LS(LG(DOT)) LG(DOT/)
 #define Q_QMARK &mt LS(LG(QMARK)) LG(QMARK)
-
+//
 // misc aliases
 #define LOCK_SCRN   &kp LC(LG(Q))
 #define NUM_MULTI   &kp KP_MULTIPLY
@@ -222,17 +226,17 @@ ZMK_BEHAVIOR(bs_del, mod_morph,
     keep-mods = <MOD_RSFT>;
 )
 
-// tap: num-word | double-tap: sticky num-layer | hold: num-layer
-#define SMART_NUM &smart_num NUM 0
-ZMK_BEHAVIOR(smart_num, hold_tap,
+// tap: sticky shift | double-tap: sticky num-layer | hold: num-layer
+#define SHFT_NUM &shift_num NUM 0
+ZMK_BEHAVIOR(shift_num, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&num_dance>;
+    bindings = <&mo>, <&sticky_num_dance>;
 )
-ZMK_BEHAVIOR(num_dance, tap_dance,
-    tapping-term-ms = <200>;
-    bindings = <&num_word>, <&sl NUM>;  // reverse this for sticky-num on single tap
+ZMK_BEHAVIOR(sticky_num_dance, tap_dance,
+    tapping-term-ms = <300>;
+    bindings = <&sk LSHFT>, <&sl NUM>;  // reverse this for sticky-num on single tap
 )
 &num_word {  // num-word, requires PR #1441
     layers = <NUM>;
