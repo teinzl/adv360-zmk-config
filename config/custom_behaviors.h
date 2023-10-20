@@ -82,7 +82,6 @@ ZMK_BEHAVIOR(msqt_morph, mod_morph,
       flavor = "balanced"; \
       tapping-term-ms = <280>; \
       quick-tap-ms = <QUICK_TAP_MS>; \
-      require-prior-idle-ms = <190>; \
       bindings = <HOLD>, <TAP>; \
       hold-trigger-key-positions = <TRIGGER_POS>; \
       hold-trigger-on-release; \
@@ -96,7 +95,6 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand
         flavor = "balanced"; \
         tapping-term-ms = <280>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
-        require-prior-idle-ms = <190>; \
         bindings = <HOLD>, <MACRO>; \
         hold-trigger-key-positions = <TRIGGER_POS>; \
         hold-trigger-on-release; \
@@ -239,7 +237,6 @@ ZMK_BEHAVIOR(comma_dance, tap_dance,
         flavor = "tap-preferred"; \
         tapping-term-ms = <300>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
-        require-prior-idle-ms = <190>; \
         bindings = <HOLD>, &none; \
     )
 MAKE_LONG_HOLD(hbt, &bt)
