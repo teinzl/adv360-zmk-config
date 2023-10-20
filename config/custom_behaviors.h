@@ -134,9 +134,9 @@ MAKE_MACRO_HRM(mbkt_rshft, &kp RSHFT, &mbkt, KEYS_L THUMBS)
 #define CANCEL      &kp K_CANCEL        // cancel caps-word, num-word and smart-mouse
 #define LHYP        LS(LC(LA(LGUI)))
 #define RHYP        RS(RC(RA(RGUI)))
-#define PASTE       &kp LG(V)
-#define UNDO        &kp LG(Z)
-#define REDO        &kp LS(LG(Z))
+#define CMD_PASTE   &kp LG(V)
+#define CMD_UNDO    &kp LG(Z)
+#define CMD_REDO    &kp LS(LG(Z))
 #define PREV_WINDOW &kp LS(LG(GRAVE))
 #define NEXT_WINDOW &kp LG(GRAVE)
 /* #define DSK_PREV    &kp LC(LEFT)      // previous desktop */
