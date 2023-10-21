@@ -238,7 +238,7 @@ ZMK_BEHAVIOR(comma_dance, tap_dance,
         flavor = "tap-preferred"; \
         tapping-term-ms = <300>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
-        bindings = <HOLD>, &none; \
+        bindings = <HOLD, &none>; \
     )
 MAKE_LONG_HOLD(hbt, &bt)
 // TODO: confirm these actually work
