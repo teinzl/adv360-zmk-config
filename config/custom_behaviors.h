@@ -211,12 +211,13 @@ ZMK_BEHAVIOR(sticky_num_dance, tap_dance,
     tapping-term-ms = <300>;
     bindings = <&sk LSHFT>, <&sl NUM>;  // reverse this for sticky-num on single tap
 )
-ZMK_BEHAVIOR(copy_cut, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&kp LG(X)>, <&kp LG(C)>;
-)
+/* ZMK_BEHAVIOR(copy_cut, hold_tap, */
+/*     flavor = "balanced"; */
+/*     tapping-term-ms = <200>; */
+/*     quick-tap-ms = <QUICK_TAP_MS>; */
+/*     bindings = <&kp LG(X), &kp LG(C)>; */
+/* ) */
+#define COPY_CUT &mt LG(X) LG(C)
 
 
 // tap: caps word | double-tap: caps lock
