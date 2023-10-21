@@ -233,19 +233,19 @@ ZMK_BEHAVIOR(comma_dance, tap_dance,
     bindings = <&kp SPACE>, <&comma_space>;
 )
 
-#define MAKE_LONG_HOLD(NAME, HOLD) \
-    ZMK_BEHAVIOR(NAME, hold_tap, \
-        flavor = "tap-preferred"; \
-        tapping-term-ms = <300>; \
-        quick-tap-ms = <QUICK_TAP_MS>; \
-        bindings = <HOLD, &none>; \
-    )
-MAKE_LONG_HOLD(hbt, &bt)
-// TODO: confirm these actually work
-#define BT_0 &hbt BT_SEL 0
-#define BT_1 &hbt BT_SEL 1
-#define BT_2 &hbt BT_SEL 2
-#define BT_3 &hbt BT_SEL 3
-#define BT_4 &hbt BT_SEL 4
+/* #define MAKE_LONG_HOLD(NAME, HOLD) \ */
+/*     ZMK_BEHAVIOR(NAME, hold_tap, \ */
+/*         flavor = "tap-preferred"; \ */
+/*         tapping-term-ms = <300>; \ */
+/*         quick-tap-ms = <QUICK_TAP_MS>; \ */
+/*         bindings = <HOLD, &none>; \ */
+/*     ) */
+/* MAKE_LONG_HOLD(hbt, &bt) */
+// TODO: figure out how to get these things wrapped in a hold tap so that accidental taps don't change the bluetooth profile
+#define BT_0 &bt BT_SEL 0
+#define BT_1 &bt BT_SEL 1
+#define BT_2 &bt BT_SEL 2
+#define BT_3 &bt BT_SEL 3
+#define BT_4 &bt BT_SEL 4
 
 
