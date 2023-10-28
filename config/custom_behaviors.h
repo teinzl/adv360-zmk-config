@@ -70,6 +70,13 @@ ZMK_BEHAVIOR(msqt_morph, mod_morph,
     bindings = <&msqt>, <&mdqt>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
+ZMK_BEHAVIOR(mtabnext, macro,
+    bindings = <&macro_tap &kp G &kp T>;
+)
+ZMK_BEHAVIOR(mtabprev, macro,
+    bindings =
+        <&macro_tap &kp G &kp LS(T)>;
+)
 
 
 /* Homerow mods */
@@ -89,6 +96,16 @@ ZMK_BEHAVIOR(msqt_morph, mod_morph,
 
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand
+
+// Base Layer home row mods
+#define A_LGUI     &hml LGUI A
+#define R_LALT     &hml LALT R
+#define S_LCTRL    &hml LCTRL S
+#define T_LSHFT    &hml LSHFT T
+#define N_RSHFT    &hmr RSHFT N
+#define E_RCTRL    &hmr RCTRL E
+#define I_RALT     &hmr RALT I
+#define O_RGUI     &hmr RGUI O
 
 
 // SYM Layer home row mods
@@ -125,9 +142,15 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand
 #define CMD_REDO    &kp LS(LG(Z))
 #define PREV_WINDOW &kp LS(LG(GRAVE))
 #define NEXT_WINDOW &kp LG(GRAVE)
+#define NEXT_TAB    &mtabnext
+#define PREV_TAB    &mtabprev
 /* #define DSK_PREV    &kp LC(LEFT)      // previous desktop */
 /* #define DSK_NEXT    &kp LC(RIGHT)      // next     desktop */
 #define SWAP_PREV   &kp LS(TAB)
+#define SPC_NAV     &lt_spc NAV 0
+#define RET_HYP     &mt RHYP ENTER
+#define BSPC_SYM    &lt_del SYM 0
+
 
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
 //ZMK_BEHAVIOR(smart_shft, mod_morph,
