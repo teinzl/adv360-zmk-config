@@ -115,9 +115,10 @@ ZMK_BEHAVIOR(caps_dance, tap_dance,
 ZMK_BEHAVIOR(comma_space, macro,
     bindings = <&macro_tap &kp COMMA &kp SPACE>;
 )
+// tap: space | double-tap: comma + space | shift + tap: underscore
 ZMK_BEHAVIOR(comma_dance, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&kp SPACE>, <&comma_space>;
+    bindings = <&spund>, <&comma_space>;
 )
 
 
@@ -131,14 +132,14 @@ ZMK_BEHAVIOR(comma_dance, tap_dance,
 // As per PR 1938
 
 // Spectacle controls
-#define SPC_UP    &kp LA(LG(UP))
-#define SPC_DOWN  &kp LA(LG(DOWN))
-#define SPC_LEFT  &kp LA(LG(LEFT))
-#define SPC_RIGHT &kp LA(LG(RIGHT))
-#define SPC_FULL  &kp LA(LG(F))
-#define SPC_MVR   &kp LC(LA(LG(RIGHT)))
-#define SPC_MVL   &kp LC(LA(LG(LEFT)))
-#define SPC_UNDO  &kp LC(LA(LG(Z)))
+#define SPC_UP    &kp LA(LG(UP))         // Cycle through upper positions
+#define SPC_DOWN  &kp LA(LG(DOWN))       // Cycle through lower positions
+#define SPC_LEFT  &kp LA(LG(LEFT))       // Cycle through left positions
+#define SPC_RIGHT &kp LA(LG(RIGHT))      // Cycle through right positions
+#define SPC_FULL  &kp LA(LG(F))          // Fullscreen
+#define SPC_MVR   &kp LC(LA(LG(RIGHT)))  // Move right one screen
+#define SPC_MVL   &kp LC(LA(LG(LEFT)))   // Move left one screen
+#define SPC_UNDO  &kp LC(LA(LG(Z)))      // Undo last spectacle action
 
 // Mouse Layer command shortcuts
 // All keys become tap: command + (key) and long tap: shift + command + (key)
@@ -162,16 +163,18 @@ ZMK_BEHAVIOR(comma_dance, tap_dance,
 #define CMD_REDO    &kp LS(LG(Z))
 #define PREV_WINDOW &kp LS(LG(GRAVE))
 #define NEXT_WINDOW &kp LG(GRAVE)
-#define NEXT_TAB    &mtabnext
-#define PREV_TAB    &mtabprev
+#define NEXT_TAB    &mtabnext          // next tab in vim or browser(with vimium)
+#define PREV_TAB    &mtabprev          // previous tab in vim or browser(with vimium)
 #define DSK_PREV    &kp LC(LEFT)       // previous desktop
 #define DSK_NEXT    &kp LC(RIGHT)      // next     desktop
 #define SWAPPER     &swapper
 #define SWAP_PREV   &kp LS(TAB)
-#define SPC_NAV     &lt_spc NAV 0
-#define RET_HYP     &mt RHYP ENTER
-#define BSPC_SYM    &lt_del SYM 0
-#define SHFT_NUM    &shift_num NUM 0
+
+// Thumb keys
+#define SPC_NAV     &lt_spc NAV 0      // tap: space | shift + tap: underscore | hold: NAV layer
+#define RET_HYP     &mt RHYP ENTER     // tap: enter | hold: HYPER key
+#define BSPC_SYM    &lt_del SYM 0      // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete | hold: SYM layer
+#define SHFT_NUM    &shift_num NUM 0   // tap: sticky shift | double-tap: sticky num layer | hold: NUM layer
 
 /* #define MAKE_LONG_HOLD(NAME, HOLD) \ */
 /*     ZMK_BEHAVIOR(NAME, hold_tap, \ */
