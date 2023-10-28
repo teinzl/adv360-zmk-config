@@ -13,6 +13,7 @@
 
 #define ___ &trans
 
+/* Layer references  */
 #define COLEMAK 0
 #define QWERTY 1
 #define NUM 2
@@ -24,8 +25,10 @@
 
 /* Global settings */
 #include "general.h"
+
 /* Home row mods */
 #include "homerow_mods.h"
+
 /* Macros and shortcuts */
 #include "custom_behaviors.h"
 
