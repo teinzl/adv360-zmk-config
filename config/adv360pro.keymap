@@ -79,8 +79,8 @@
     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5  &kp F6            &tog 0                                                   &mo 3    &kp F7           &kp F8          &kp F9          &kp F10    &kp F11   &kp F12
     &trans        &trans        &trans        &trans        &trans  &trans             &none                                                   &none    &kp HOME         &trans          &kp UP           &trans    &kp PG_UP  &kp BSLH
     &trans  &macro_ctrla  &macro_ctrls        &trans        &trans  &trans             &none                                                   &none    &kp END          &kp LEFT        &kp DOWN         &kp RIGHT &kp PG_DN  &kp SQT
- &kp LSHFT  &macro_ctrlz  &macro_ctrlx  &macro_ctrlc  &macro_ctrlv  &trans                            &trans                  &trans                    &trans          &trans          &trans           &trans   &kp SLASH    &trans
-    &trans     &kp SPACE     &kp ENTER        &trans        &trans                    &trans                                                   &trans    &trans           &trans          &trans           &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK     &trans   &trans
+ &kp LSHFT  &macro_ctrlz  &macro_ctrlx  &macro_ctrlc  &macro_ctrlv  &trans                                                                              &trans          &trans          &trans           &trans   &kp SLASH    &trans
+    &trans     &kp SPACE     &kp ENTER        &trans        &trans                                                                                        &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK     &trans   &trans
                                                                           &kp LCTRL      &kp LALT                 &kp LGUI   &kp RALT 
                                                                   &kp BSPC    &kp DE     &kp TAB                  &kp RCTRL  &kp ENTER  &kp SPACE
                                                                                    &kp LEFT_WIN                   &kp CAPS
@@ -93,15 +93,14 @@
         mod_layer {
       &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                          &trans   &none       &none       &none   &none   &none   &none
   &none         &none         &none         &none         &none         &none            &bootloader                                                                     &bootloader   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none         &none                  &none                                                                          &none    &none          &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none    &macro_ver         &none                                  &none                       &none                                       &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none                                &none                                                                          &none    &none           &none        &none   &bl BL_TOG         &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC   &none   &none   &none
+  &none         &none         &none         &none         &none         &none                  &none                                                                          &none    &none          &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none       &none 
+  &none         &none         &none         &none    &macro_ver         &none                                                                                                                 &none       &none       &none   &none   &none   &none
+  &none         &none         &none         &none         &none                                                                                                          &bl BL_TOG         &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC   &none   &none   &none
                                                                           &kp LCTRL      &kp LALT                 &kp LGUI   &kp RALT 
                                                                   &kp BSPC    &kp DE     &kp TAB                  &kp RCTRL  &kp ENTER  &kp SPACE
                                                                                    &kp LEFT_WIN                   &kp CAPS
             >;
         };
-
 
 //ARROWS 4
        arrows_layer {
@@ -109,8 +108,8 @@
     &trans     &kp GRAVE  &trans        &trans        &trans  &trans                    &to 0                                                        &trans    &trans  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK     &trans  &trans
     &trans     &trans     &trans        &trans        &kp BSPC  &trans                   &trans                                                        &trans    &kp END    &kp BACKSPACE          &kp UP          &kp DEL  &kp PG_UP  &trans
     &trans     &kp LALT   &trans        &kp LCTRL     &kp LSHFT &trans                   &trans                                                        &trans    &kp HOME   &kp LEFT               &kp DOWN        &kp RIGHT  &kp PG_DN  &trans
-    &trans     &macro_ctrlz  &trans  &macro_ctrlx  &macro_ctrlv  &trans                                         &trans                  &trans                    &trans           &trans          &trans           &trans     &trans  &trans
-    &trans     &trans     &trans        &kp LCTRL     &kp RSHFT                    &macro_alttab  &kp ENTER  &kp ENTER                  &trans    &trans    &trans                     &trans          &trans           &trans     &trans  &trans
+    &trans     &macro_ctrlz  &trans  &macro_ctrlx  &macro_ctrlv  &trans                                                                                          &trans     &trans                 &trans          &trans     &trans    &trans
+    &trans     &trans     &trans        &kp LCTRL     &kp RSHFT                                                                                                      &trans          &trans           &trans     &trans  &trans
                                                                           &kp LCTRL      &kp LALT                 &kp LGUI   &kp RALT 
                                                                   &kp BSPC    &kp DE     &kp TAB                  &kp RCTRL  &kp ENTER  &kp SPACE
                                                                                    &kp LEFT_WIN                   &kp CAPS
@@ -122,9 +121,9 @@
           bindings = <
     &trans  &trans  &trans  &trans    &trans  &trans             &to 0                                                  &trans         &trans                &trans                 &trans          &trans          &trans  &kp GRAVE
     &trans  &trans  &trans  &trans    &trans  &trans            &trans                                                  &trans      &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &macro_shift_o  &macro_shift_p   &kp BSLH
-    &kp LSHFT  &trans  &trans  &trans    &trans  &trans            &trans                                                  &trans      &kp SEMICOLON          &kp QUESTION               &kp EXCL         &kp SQT         &kp DQT    &kp DQT
-    &trans  &trans  &trans  &trans    &kp RALT  &trans                            &trans                                                  &trans      &kp SLASH             &kp MINUS                &kp DQT     &macro_dots    &kp QUESTION  &kp COLON
-    &trans  &trans  &trans  &trans    &trans                    &trans                                                  &trans      &trans                   &trans                 &trans          &trans          &trans     &trans
+    &kp LSHFT  &trans  &trans  &trans    &trans  &trans            &trans                                               &trans      &kp SEMICOLON          &kp QUESTION               &kp EXCL         &kp SQT         &kp DQT    &kp DQT
+    &trans  &trans  &trans  &trans    &kp RALT  &trans                                                                                  &kp SLASH             &kp MINUS                &kp DQT     &macro_dots    &kp QUESTION  &kp COLON
+    &trans  &trans  &trans  &trans    &trans                                                                                               &trans                   &trans                 &trans          &trans          &trans     &trans
                                                                           &kp LCTRL      &kp LALT                 &kp LGUI   &kp RALT 
                                                                   &kp BSPC    &kp DE     &kp TAB                  &kp RCTRL  &kp ENTER  &kp SPACE
                                                                                    &kp LEFT_WIN                   &kp CAPS
@@ -136,9 +135,9 @@
           bindings = <
     &kp TILDE     &macro_shift1     &macro_shift_2         &macro_shift3         &macro_shift_4  &macro_shift_5             &to 0                                                                     &trans          &trans           &trans  &trans  &trans  &trans  &trans
     &trans        &macro_shift_q     &macro_shift_w        &macro_sfhit_e         &macro_shift_r  &macro_shift_t            &trans                                                                     &trans          &trans           &trans  &trans  &trans  &trans  &trans
-    &trans        &kp LEFT_BRACKET   &kp RIGHT_BRACKET     &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS          &trans            &trans                                                                     &trans          &trans           &trans  &trans          &trans  &trans  &trans  &trans
-    &trans        &trans             &trans                &trans                 &trans          &trans                            &trans                                                                     &trans          &macro_alt_cap    &macro_ctrl_cap  &trans  &trans  &trans  &trans
-    &trans        &trans             &trans                &trans                 &trans                            &trans                                                                     &trans          &trans           &trans  &macro_lang_change  &kp RIGHT_ALT                           &trans  &trans  &trans  &trans  &trans
+    &trans        &kp LEFT_BRACKET   &kp RIGHT_BRACKET     &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS          &trans            &trans                                                                     &trans          &trans           &trans  &trans          &trans  &trans  &trans
+    &trans        &trans             &trans                &trans                 &trans          &trans                                                                                                     &macro_alt_cap    &macro_ctrl_cap  &trans  &trans  &trans  &trans
+    &trans        &trans             &trans                &trans                 &trans                            &trans                                                                            &trans  &macro_lang_change  &kp RIGHT_ALT           &trans  &trans
                                                                           &kp LCTRL      &kp LALT                 &kp LGUI   &kp RALT 
                                                                   &kp BSPC    &kp DE     &kp TAB                  &kp RCTRL  &kp ENTER  &kp SPACE
                                                                                    &kp LEFT_WIN                   &kp CAPS
@@ -150,9 +149,9 @@
             bindings = <
     &trans  &trans  &trans  &trans  &trans  &trans             &to 0                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
     &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans  &U_WH_U  &U_MS_U  &U_WH_D  &trans  &trans
-    &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans  &U_MS_L  &U_MS_D  &U_MS_R  &trans  &trans  &trans  &trans
-    &trans  &trans  &trans  &trans  &trans  &trans                            &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-    &trans  &trans  &trans  &trans  &trans                            &trans                                                  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+    &trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans  &trans  &U_MS_L  &U_MS_D  &U_MS_R  &trans  &trans  
+    &trans  &trans  &trans  &trans  &trans  &trans                                                                            &trans  &trans  &trans  &trans  &trans  &trans
+    &trans  &trans  &trans  &trans  &trans                                                                                            &trans  &trans  &trans  &trans  &trans
                                                                           &kp LCTRL      &kp LALT                 &kp LGUI   &kp RALT 
                                                                   &kp BSPC    &kp DE     &kp TAB                  &kp RCTRL  &kp ENTER  &kp SPACE
                                                                                    &kp LEFT_WIN                   &kp CAPS
@@ -165,8 +164,8 @@
     &trans    &trans  &trans        &trans        &trans        &trans             &to 0                                                  &trans     &trans         &trans        &trans                &trans                 &trans  &trans
     &trans    &kp F1  &kp F2        &kp F3        &kp F4        &kp F5            &trans                                                  &trans     &kp F6         &kp F7        &kp F8                &kp F9                &kp F10  &trans
     &trans    &kp N1  &kp N2        &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5      &trans                                                  &trans     &kp N6         &kp N7        &kp N8                &kp N9                 &kp N0  &trans
-    &trans    &kp EXCL  &kp AT      &kp HASH      &kp DLLR     &kp PRCNT                            &trans                  &trans                  &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-    &trans    &trans  &trans        &trans         &to 0                          &trans  &trans  &trans                  &trans  &trans  &trans                    &trans        &trans                &trans                 &trans  &trans
+    &trans    &kp EXCL  &kp AT      &kp HASH      &kp DLLR     &kp PRCNT                                                                             &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+    &trans    &trans  &trans        &trans         &to 0                                                                                                            &trans            &trans           &trans                 &trans  &trans
                                                                           &kp LCTRL      &kp LALT                 &kp LGUI   &kp RALT 
                                                                   &kp BSPC    &kp DE     &kp TAB                  &kp RCTRL  &kp ENTER  &kp SPACE
                                                                                    &kp LEFT_WIN                   &kp CAPS
@@ -178,8 +177,8 @@
     &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5               &to 0                                                                     &mo 3  &kp N6  &kp N7     &kp N8            &kp N9             &kp N0      &kp MINUS
     &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T              &trans                                                                    &trans   &kp Y   &kp U      &kp I             &kp O              &kp P  &kp BACKSLASH
     &kp ESC      &kp A     &kp S     &kp D      &kp F   &kp G              &trans                                                                    &trans   &kp H   &kp J      &kp K             &kp L      &kp SEMICOLON        &kp SQT
-    &kp LSHIFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                 &kp HOME                    &kp PAGE_UP                         &kp N   &kp M  &kp COMMA           &kp DOT          &kp SLASH      &kp RSHFT
-    &mo 2  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                    &kp BSPC    &kp DEL   &kp END                  &kp PAGE_DOWN  &kp ENTER  &kp SPACE          &kp UP   &kp DOWN  &kp LEFT_BRACKET  &kp RIGHT_BRACKET          &mo 2
+    &kp LSHIFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                                                                               &kp N   &kp M  &kp COMMA           &kp DOT          &kp SLASH      &kp RSHFT
+    &mo 2  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                                                                                                                   &kp UP   &kp DOWN  &kp LEFT_BRACKET  &kp RIGHT_BRACKET          &mo 2
                                                                           &kp LCTRL      &kp LALT                 &kp LGUI   &kp RALT 
                                                                   &kp BSPC    &kp DE     &kp TAB                  &kp RCTRL  &kp ENTER  &kp SPACE
                                                                                    &kp LEFT_WIN                   &kp CAPS
