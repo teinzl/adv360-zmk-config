@@ -91,9 +91,9 @@
 
  //  MOD 3
         mod_layer {
-      &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                          &trans   &none       &none       &none   &none   &none   &none
+      &none  &bt_SEL 0  &bt_SEL 1  &bt_SEL 2  &bt_SEL 3  &bt_SEL 4                  &none                                                                          &trans   &none       &none       &none   &none   &none   &none
   &none         &none         &none         &none         &none         &none            &bootloader                                                                     &bootloader   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none         &none                  &none                                                                          &none    &none          &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none       &none 
+  &none         &none         &none         &none         &none         &none                  &none                                                                          &none    &none          &BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none       &none 
   &none         &none         &none         &none    &macro_ver         &none                                                                                                                 &none       &none       &none   &none   &none   &none
   &none         &none         &none         &none         &none                                                                                                          &bl BL_TOG         &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC   &none   &none   &none
                                                                           &kp LCTRL      &kp LALT                 &kp LGUI   &kp RALT 
@@ -133,7 +133,7 @@
         s2_layer {
           bindings = <
     &kp TILDE     &macro_shift1     &macro_shift_2         &macro_shift3         &macro_shift_4  &macro_shift_5             &to 0                                                                     &trans          &trans           &trans  &trans  &trans  &trans  &trans
-    &trans        &macro_shift_q     &macro_shift_w        &macro_sfhit_e         &macro_shift_r  &macro_shift_t            &trans                                                                     &trans          &trans           &trans  &trans  &trans  &trans  &trans
+    &trans        &macro_shift_q     &macro_shift_w        &macro_shift_e         &macro_shift_r  &macro_shift_t            &trans                                                                     &trans          &trans           &trans  &trans  &trans  &trans  &trans
     &trans        &kp LEFT_BRACKET   &kp RIGHT_BRACKET     &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS          &trans            &trans                                                                     &trans          &trans           &trans  &trans          &trans  &trans  &trans
     &trans        &trans             &trans                &trans                 &trans          &trans                                                                                                     &macro_alt_cap    &macro_ctrl_cap  &trans  &trans  &trans  &trans
     &trans        &trans             &trans                &trans                 &trans                            &trans                                                                            &trans  &macro_lang_change  &kp RIGHT_ALT           &trans  &trans
