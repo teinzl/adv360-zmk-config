@@ -102,13 +102,14 @@
             >;
         };
 
-// ARROWS 4
+
+ // ARROWS 4
        arrows_layer {
             bindings = <
     &trans     &kp GRAVE  &trans        &trans        &trans  &trans                    &to 0                                                        &trans    &trans  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK     &trans  &trans
     &trans     &trans     &trans        &trans        &kp BSPC  &trans                   &trans                                                        &trans    &kp END    &kp BACKSPACE          &kp UP          &kp DEL  &kp PG_UP  &trans
     &trans     &kp LALT   &trans        &kp LCTRL     &kp LSHFT &trans                   &trans                                                        &trans    &kp HOME   &kp LEFT               &kp DOWN        &kp RIGHT  &kp PG_DN  &trans
-    &trans     macro_ctrlz  trans  macro_ctrlx  macro_ctrlv  &trans                                                                                          &trans     &trans                 &trans          &trans     &trans    &trans
+    &trans     &macro_ctrlz  &trans  &macro_ctrlx  &macro_ctrlv  &trans                                                                                          &trans     &trans                 &trans          &trans     &trans    &trans
     &trans     &trans     &trans        &kp LCTRL     &kp RSHFT                                                                                                      &trans          &trans           &trans     &trans  &trans
                                                                           &kp LCTRL      &kp LALT                 &kp LGUI   &kp RALT 
                                                                   &kp BSPC    &kp DE     &kp TAB                  &kp RCTRL  &kp ENTER  &kp SPACE
