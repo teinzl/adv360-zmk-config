@@ -64,7 +64,7 @@ bindings = <&kt LSHFT>, <&kp O>, <&kt LSHFT>;
 ZMK_BEHAVIOR(macro_shift_p, macro,
 bindings = <&kt LCTRL>, <&kp CAPSLOCK>, <&kt LCTRL>;
 )
-ZMK_BEHAVIOR(macro_alttab_cap, macro,
+ZMK_BEHAVIOR(macro_alttab, macro,
 bindings = <&kt LEFT_ALT>, <&kp TAB>, <&kt LEFT_ALT>;
 )
 
