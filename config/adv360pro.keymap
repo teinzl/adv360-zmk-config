@@ -25,7 +25,7 @@
 
 
 /* Global settings */
-#include "general.h"
+//#include "general.h"
 
 /* Home row mods */
 #include "homerow_mods.h"
