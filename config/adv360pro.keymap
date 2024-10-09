@@ -17,15 +17,15 @@
 #define fn 2
 #define mod 3
 #define arrows 4
-#define sl 5
-#define sr 6
+#define s1 5
+#define s2 6
 #define mouse 7
 #define numbers 8
 #define Normal 9
 
 
 /* Global settings */
-//#include "general.h"
+#include "general.h"
 
 /* Home row mods */
 #include "homerow_mods.h"
@@ -118,7 +118,7 @@
         };
 
 // layer_symbols_left 5
-        sl_layer {
+        s1_layer {
           bindings = <
     &trans  &trans  &trans  &trans    &trans  &trans             &to 0                                                  &trans         &trans                &trans                 &trans          &trans          &trans  &kp GRAVE
     &trans  &trans  &trans  &trans    &trans  &trans            &trans                                                  &trans      &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &macro_shift_o  &macro_shift_p   &kp BSLH
@@ -132,7 +132,7 @@
             >;
         };
 // layer_symbols_RIGHT 6
-        sr_layer {
+        s2_layer {
           bindings = <
     &kp TILDE     &macro_shift1     &macro_shift_2         &macro_shift3         &macro_shift_4  &macro_shift_5             &to 0                                                                     &trans          &trans           &trans  &trans  &trans  &trans  &trans
     &trans        &macro_shift_q     &macro_shift_w        &macro_sfhit_e         &macro_shift_r  &macro_shift_t            &trans                                                                     &trans          &trans           &trans  &trans  &trans  &trans  &trans
