@@ -68,55 +68,55 @@ ZMK_BEHAVIOR(macro_alttab_cap, macro,
 bindings = <&kt LEFT_ALT>, <&kp TAB>, <&kt LEFT_ALT>;
 )
 
-ZMK_BEHAVIOR(macro_ctrls_cap, macro,
+ZMK_BEHAVIOR(macro_ctrls, macro,
 bindings = <&kt LCTRL>, <&kp S>, <&kt LCTRL>;
 )
 
-ZMK_BEHAVIOR(macro_ctrla_cap, macro,
+ZMK_BEHAVIOR(macro_ctrla, macro,
 bindings = <&kt LCTRL>, <&kp A>, <&kt LCTRL>;
 )
 
-ZMK_BEHAVIOR(macro_ctrlv_cap, macro,
+ZMK_BEHAVIOR(macro_ctrlv, macro,
 bindings = <&kt LCTRL>, <&kp V>, <&kt LCTRL>;
 )
 
-ZMK_BEHAVIOR(macro_ctrlc_cap, macro,
+ZMK_BEHAVIOR(macro_ctrlc, macro,
 bindings = <&kt LCTRL>, <&kp C>, <&kt LCTRL>;
 )
 
-ZMK_BEHAVIOR(macro_ctrlx_cap, macro,
+ZMK_BEHAVIOR(macro_ctrlx, macro,
 bindings = <&kt LCTRL>, <&kp X>, <&kt LCTRL>;
 )
 
-ZMK_BEHAVIOR(macro_ctrlz_cap, macro,
+ZMK_BEHAVIOR(macro_ctrlz, macro,
 bindings = <&kt LCTRL>, <&kp Z>, <&kt LCTRL>;
 )
 
-ZMK_BEHAVIOR(macro_windows_tab_cap, macro,
+ZMK_BEHAVIOR(macro_windows_tab, macro,
 bindings = <&kt LEFT_WIN>, <&kp TAB>, <&kt LEFT_WIN>;
 )
 
-ZMK_BEHAVIOR(macro_quotes_cap, macro,
+ZMK_BEHAVIOR(macro_quotes, macro,
 bindings = <&kp SQT>, <&kp SQT>, <&kp LEFT>;
 )
 
-ZMK_BEHAVIOR(macro_dquotes_cap, macro,
+ZMK_BEHAVIOR(macro_dquotes, macro,
 bindings = <&kp DQT>, <&kp DQT>, <&kp LEFT>;
 )
 
-ZMK_BEHAVIOR(macro_braces_cap, macro,
+ZMK_BEHAVIOR(macro_braces, macro,
 bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
 )
 
-ZMK_BEHAVIOR(macro_parens_cap, macro,
+ZMK_BEHAVIOR(macro_parens, macro,
 bindings = <&kp LPAR>, <&kp RPAR>, <&kp LEFT>;
 )
 
-ZMK_BEHAVIOR(macro_brackets_cap, macro,
+ZMK_BEHAVIOR(macro_brackets, macro,
 bindings = <&kp LBKT>, <&kp RBKT>, <&kp LEFT>;
 )
 
-ZMK_BEHAVIOR(macro_kinesis_cap, macro,
+ZMK_BEHAVIOR(macro_kinesis, macro,
 bindings = <&kp LS(K)>, <&kp I>, <&kp N>, <&kp E>, <&kp S>, <&kp I>, <&kp S>;
 )
 
