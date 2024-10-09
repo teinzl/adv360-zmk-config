@@ -6,7 +6,6 @@
 #include <dt-bindings/zmk/backlight.h>
 #include "adv360pro_keypos.h"
 #include "zmk_helper.h"
-
 /* definitions for mouse layer */
 #include "mouse.h"
 
