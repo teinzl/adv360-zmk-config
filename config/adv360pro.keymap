@@ -102,7 +102,7 @@
             >;
         };
 
-//ARROWS 4
+// ARROWS 4
        arrows_layer {
             bindings = <
     &trans     &kp GRAVE  &trans        &trans        &trans  &trans                    &to 0                                                        &trans    &trans  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK     &trans  &trans
@@ -144,7 +144,7 @@
             >;
         };
 
-//layer_mouse 7
+// layer_mouse 7
         mouse_layer {
             bindings = <
     &trans  &trans  &trans  &trans  &trans  &trans             &to 0                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -158,7 +158,7 @@
             >;
         };
 
-//layer_numbers 8
+// layer_numbers 8
         numbers_layer {
             bindings = <
     &trans    &trans  &trans        &trans        &trans        &trans             &to 0                                                  &trans     &trans         &trans        &trans                &trans                 &trans  &trans
@@ -171,7 +171,7 @@
                                                                                    &kp LEFT_WIN                   &kp CAPS
             >;
         };
-//NORMAL_KEY 9
+// NORMAL_KEY 9
         normal_layer {
             bindings = <
     &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5               &to 0                                                                     &mo 3  &kp N6  &kp N7     &kp N8            &kp N9             &kp N0      &kp MINUS
